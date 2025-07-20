@@ -1,6 +1,5 @@
 using CounterStrikeSharp.API.Core;
 using CounterStrikeSharp.API.Modules.Menu;
-using MenuManager;
 using IksAdminApi;
 using CounterStrikeSharp.API.Modules.Utils;
 using MenuType = IksAdminApi.MenuType;
@@ -65,7 +64,7 @@ public class DynamicMenu : IDynamicMenu
         switch ((int)Type)
         {
             case -1: // [MM]
-                menu = Main.MenuApi!.NewMenu(MenuTitle(player));
+                menu = Main.MenuApi!.GetMenu(MenuTitle(player));
                 break;
             case 0:
                 menu = new ChatMenu(MenuTitle(player));
@@ -77,7 +76,7 @@ public class DynamicMenu : IDynamicMenu
                 menu = new CenterHtmlMenu(MenuTitle(player), Main.AdminApi.Plugin);
                 break;
             case 3: // [MM]
-                menu = Main.MenuApi!.NewMenuForcetype(MenuTitle(player), (MenuManager.MenuType)Type);
+                menu = Main.MenuApi!.GetMenu(MenuTitle(player), forceType: (MenuManagerAPI.Shared.Models.MenuType?)Type);
                 break;
             case 4: // [SCREEN MENU API]
                 screenMenu = new ScreenMenu.Menu(player, Main.AdminApi.Plugin)

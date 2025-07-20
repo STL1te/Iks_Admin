@@ -15,8 +15,8 @@
     <PackageReference Include="mysqlconnector" Version="2.3.7"/>
     <PackageReference Include="SteamWebAPI2" Version="4.4.1"/>
     <ProjectReference Include="..\IksAdminApi\IksAdminApi.csproj"/>
-    <PackageReference Include="CounterStrikeSharp.Api" Version="1.0.323"/>
-    <Reference Include="../RequirmentsApi/MenuManagerApi.dll"/>
+    <PackageReference Include="CounterStrikeSharp.Api" Version="1.0.328" />
+    <Reference Include="../RequirmentsApi/MenuManagerAPI.Shared.dll"/>
     <Reference Include="../RequirmentsApi/CS2ScreenMenuAPI.dll"/>
   </ItemGroup>
 
@@ -29,7 +29,7 @@
       <SelectedDlls Include="$(OutputPath)\AutoMapper.dll"/>
       <SelectedDlls Include="$(OutputPath)\CoreRcon.dll"/>
       <SelectedDlls Include="$(OutputPath)\Dapper.dll"/>
-      <SelectedDlls Include="$(OutputPath)\MenuManagerApi.dll"/>
+      <SelectedDlls Include="$(OutputPath)\MenuManagerAPI.Shared.dll"/>
       <SelectedDlls Include="$(OutputPath)\CS2ScreenMenuAPI.dll"/>
       <SelectedDlls Include="$(OutputPath)\MySqlConnector.dll"/>
       <SelectedDlls Include="$(OutputPath)\Newtonsoft.Json.dll"/>

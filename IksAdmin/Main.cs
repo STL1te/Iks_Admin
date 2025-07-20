@@ -1,6 +1,5 @@
 ﻿using CounterStrikeSharp.API.Core;
 using CounterStrikeSharp.API.Core.Capabilities;
-using MenuManager;
 using IksAdminApi;
 using CounterStrikeSharp.API.Modules.Menu;
 using IksAdmin.Menu;
@@ -25,6 +24,7 @@ using SteamWebAPI2.Interfaces;
 using CounterStrikeSharp.API.Modules.Entities;
 using CounterStrikeSharp.API.Modules.Timers;
 using IksAdmin.Menus;
+using MenuManagerAPI.Shared;
 using CoreConfig = IksAdminApi.CoreConfig;
 namespace IksAdmin;
 
@@ -34,8 +34,8 @@ public class Main : BasePlugin
     public override string ModuleVersion => "3.0 v17";
     public override string ModuleAuthor => "iks [Discord: iks__]";
 
-    public static IMenuApi MenuApi = null!;
-    private static readonly PluginCapability<IMenuApi?> MenuCapability = new("menu:nfcore");   
+    public static IMenuAPI MenuApi = null!;
+    private static readonly PluginCapability<IMenuAPI?> MenuCapability = new("menu:api");   
     public static AdminApi AdminApi = null!;
     private readonly PluginCapability<IIksAdminApi> _pluginCapability  = new("iksadmin:core");
     
